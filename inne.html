@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+</head>
+<body align="center" style="margin-top: 150px; background-color: aqua;">
+    
+    <script>        function pop1()
+        {
+          var k=document.getElementById('a')
+          var l=document.getElementById('b')
+          var g=k.value;
+          var h=l.value;
+          var z=h*h;
+          var y=g/z
+          document.getElementById('adtn').innerHTML=y
+          if(y>=29.9)
+          {
+            document.getElementById('grd').innerHTML="OBSITY"
+            document.getElementById('grd').style.color="red"
+
+          }
+          else if(y<29.9&& y>=24.9)
+            {
+                document.getElementById('grd').innerHTML="OVER WEIGHT"
+                document.getElementById('grd').style.color="orange"
+            }
+            else if(y<24.9&& y>=18.5)
+            {
+                document.getElementById('grd').innerHTML="NORMAL WEIGHT"
+                document.getElementById('grd').style.color="green"
+            }
+            else{
+                document.getElementById('grd').innerHTML="UNDER WEIGHT"
+                document.getElementById('grd').style.color="white"
+            }
+
+        
+        }
+        function clr()
+        {
+            document.getElementById('a').value=""
+            document.getElementById('b').value=""
+            document.getElementById('adtn').innerHTML="***"
+            document.getElementById('grd').innerHTML="NIL"
+        }
+    </script>
+    <style>
+        input{
+            width: 250px;
+            height: 20px;
+            margin-left: 60px;
+            background-color: steelblue
+            color(srgb rgb(243, 224, 224) green rgb(252, 252, 252))
+        }
+        button{
+            height: 25px;
+            width: 200px;
+            border-radius: 5px;
+            margin-left: 60px;
+
+        }
+    </style>
+    
+    <div style="border: solid yellowgreen; width: 400px; height: 600px; margin-left: 350px; border-radius: 25PX; background-color:skyblue; color: blue;">
+<label for="">BMI CALCULATOR</label><br><br>
+
+<label for=""> Enter Weight  (in Kg):</label> <input type="text" id='a' placeholder="Weight"><br><br><br>
+
+<label for=""> Enter height (in m) </label> <input type="text" id='b' placeholder="Height"><br><br><br>
+<button onclick="pop1()">CALCULATE BMI</button><br><br>
+<button onclick="clr()">CLEAR</button><br><br>
+<p> Your BMI:</p><h1 id="adtn">****</h1>
+<p> You are</p><h1 id="grd">NIL</h1>
+    </div>
+
+    
+</body>
+</html>
